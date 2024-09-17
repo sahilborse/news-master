@@ -42,22 +42,48 @@ const showNextPage=async()=>{
         }
       };
   return (
-    <div>
-      <Layout>
-    <div className='container my-3' >
-      <div className='row mx-3'>
-      {articles.map((element)=>{
-        return <div className='h-20 col-md-4'key={element.url}>
-        <NewsCard title={element.title?element.title.slice(0,30):""} description={element.description?element.description.slice(0,80):""}imageUrl={element.urlToImage} newsUrl={element.url}/>
-        </div>
-      })}
-      </div >
-      <div className='container d-flex justify-content-between'>
-          <button target="_blank" rel="noreferrer" disabled={page<=1} type="button" className="btn btn-dark " onClick={showPrevPage}>Previous</button>
-          <button target="_blank" rel="noreferrer" disabled={page + 1 > (Math.floor(pageCount/20)+1)} type="button" className="btn btn-dark " onClick={showNextPage}>Next </button>
-          </div>
-        </div>
-      </Layout>
-    </div>
+   
+      <div>
+          <Layout>
+              <div className='container my-3'>
+                  <div className='row mx-3'>
+                      {Array.isArray(articles) && articles.length > 0 ? (
+                          articles.map((element) => (
+                              <div className='h-20 col-md-4' key={element.url}>
+                                  <NewsCard
+                                      title={element.title ? element.title.slice(0, 30) : ""}
+                                      description={element.description ? element.description.slice(0, 80) : ""}
+                                      imageUrl={element.urlToImage}
+                                      newsUrl={element.url}
+                                  />
+                              </div>
+                          ))
+                      ) : (
+                          <p>No articles available</p>
+                      )}
+                  </div>
+                  <div className='container d-flex justify-content-between'>
+                      <button
+                          disabled={page <= 1}
+                          type="button"
+                          className="btn btn-dark"
+                          onClick={showPrevPage}
+                      >
+                          Previous
+                      </button>
+                      <button
+                          disabled={page + 1 > Math.floor(pageCount / 20) + 1}
+                          type="button"
+                          className="btn btn-dark"
+                          onClick={showNextPage}
+                      >
+                          Next
+                      </button>
+                  </div>
+              </div>
+          </Layout>
+      </div>
+
+  
   )
 }
