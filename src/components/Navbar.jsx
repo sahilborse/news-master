@@ -12,27 +12,27 @@ export default function Navbar() {
       <div>
     <nav className="navbar  navbar-expand-lg bg-dark navbar-dark">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">News-Master</a>
+    <a className="navbar-brand" >News-Master</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+          <a className="nav-link active" aria-current="page" >Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Link</a>
+          <a className="nav-link" >Link</a>
         </li>
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a className="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Category
           </a>
           <ul className="dropdown-menu">
-             <li><a className="dropdown-item" onClick={()=>{setNewsType("Business")}}  href="#">Business</a></li>
-            <li><a className="dropdown-item"  onClick={()=>{setNewsType("Sports")}} href="#">Sports</a></li>
-            <li><a className="dropdown-item" onClick={()=>{setNewsType("Entertainment")}}  href="#">Entertainment</a></li>
-            <li><a className="dropdown-item" onClick={()=>{setNewsType("Technology")}} href="#">Technology</a></li> 
+             <li><a className="dropdown-item" onClick={()=>{setNewsType("Business")}}  >Business</a></li>
+            <li><a className="dropdown-item"  onClick={()=>{setNewsType("Sports")}} >Sports</a></li>
+            <li><a className="dropdown-item" onClick={()=>{setNewsType("Entertainment")}}  >Entertainment</a></li>
+            <li><a className="dropdown-item" onClick={()=>{setNewsType("Technology")}} >Technology</a></li> 
           </ul>
         </li>
       </ul>

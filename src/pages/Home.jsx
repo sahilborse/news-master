@@ -20,7 +20,7 @@ export default function Home() {
             console.log("pagecount",pageCount)
             console.log("page",page)
         }
-        fetching()},[newsType]  
+        fetching()},[newsType,page,pageCount]  
       );
 const showPrevPage=async()=>{
     

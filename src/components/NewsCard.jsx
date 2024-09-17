@@ -9,7 +9,7 @@ function NewsCard(props) {
                 <div className="card-body">
                     <h3 className="card-title">{props.title}...</h3>
                     <p className="card-text">{props.description}...</p>
-                    <a href={props.newsUrl} target="_blank"className="btn btn-dark">ReadMore</a>
+                    <a href={props.newsUrl} target="_blank" rel="noreferrer"  className="btn btn-dark">ReadMore</a>
                 </div>
             </div>
       </div>
