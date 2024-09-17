@@ -1,11 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Home from './pages/Home';
+import Mystate from './context/Mystate';
+
 
 function App() {
   return (
-    <div className="App">
+   
+      <Mystate>
+      <Home/>
+      </Mystate>
      
-    </div>
+   
   );
 }
 
